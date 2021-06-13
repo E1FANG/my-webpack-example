@@ -1,6 +1,6 @@
+import {JsxDemo} from './jsx-demo.jsx';
 import {a} from './a'
 import {b} from './b'
-import {JsxDemo} from './jsx-demo.jsx';
 
 console.log(JsxDemo);
 const fn1 = ()=>{

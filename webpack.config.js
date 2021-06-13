@@ -1,4 +1,5 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   mode:'production',
@@ -7,6 +8,11 @@ module.exports = {
       extensions:['.js','.jsx','ts','tsx'] // 不加.jsx就不会检查jsx文件了
     })
   ],
+  resolve: {
+    alias: {
+      '@':path.resolve(__dirname,'./src/')
+    }
+  },
   module: {
     rules: [
       {

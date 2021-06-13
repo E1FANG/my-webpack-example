@@ -4,7 +4,8 @@ module.exports ={
     // 2的意思是：没有使用就报错
     'react/jsx-uses-react':[2],
     //提示要在JSX文件里手动引入React
-    'react/react-in-jsx-scope':[2]
+    'react/react-in-jsx-scope':[2],
+    'no-console':[0]
   },
   overrides: [{
     files: ['*.ts', '*.tsx'],

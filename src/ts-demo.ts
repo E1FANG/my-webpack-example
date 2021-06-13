@@ -1,2 +1,5 @@
+import {c} from '@/c.ts';
+
 const x:string = 'typescript';
-export {x};
+const cc:string = c;
+export {x, cc};

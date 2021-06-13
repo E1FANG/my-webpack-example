@@ -3,6 +3,7 @@ import {x,cc} from  './ts-demo.ts'
 import {a} from './a'
 import {b} from './b'
 import {TsxDemo} from './tsx-demo.tsx';
+import 'src/scss-demo.scss'
 
 console.log(JsxDemo);
 console.log(x,cc);

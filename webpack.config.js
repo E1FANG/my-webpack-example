@@ -4,7 +4,7 @@ module.exports = {
   mode:'production',
   plugins: [
     new ESLintPlugin({
-      extensions:['.js','.jsx'] // 不加.jsx就不会检查jsx文件了
+      extensions:['.js','.jsx','ts','tsx'] // 不加.jsx就不会检查jsx文件了
     })
   ],
   module: {

@@ -30,6 +30,23 @@ module.exports = {
         }
       },
       {
+        test: /\.less$/i,
+        use:[
+          'style-loader',
+          {
+            loader:'css-loader',
+            options: {
+              modules: {
+                compileType: 'icss',
+              }
+            }
+          },
+          {
+            loader:'less-loader'
+          }
+        ]
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           // 将 JS 字符串生成为 style 节点

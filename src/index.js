@@ -5,6 +5,7 @@ import {b} from './b'
 import {TsxDemo} from './tsx-demo.tsx';
 import 'src/scss-demo.scss'
 import vars from 'src/scss-export.scss'
+import 'src/less-demo.less'
 
 console.log(vars);
 

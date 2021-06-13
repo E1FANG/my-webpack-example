@@ -5,9 +5,11 @@ import {b} from './b'
 import {TsxDemo} from './tsx-demo.tsx';
 import 'src/scss-demo.scss'
 import vars from 'src/scss-export.scss'
+import LessVars from 'src/less-vars.less'
 import 'src/less-demo.less'
 
 console.log(vars);
+console.log(LessVars);
 
 console.log(JsxDemo);
 console.log(x,cc);

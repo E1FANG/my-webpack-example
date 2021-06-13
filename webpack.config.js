@@ -35,7 +35,14 @@ module.exports = {
           // 将 JS 字符串生成为 style 节点
           'style-loader',
           // 将 CSS 转化成 CommonJS 模块
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules:{
+                compileType: 'icss',
+              }
+            }
+          },
           // 将 Sass 编译成 CSS
           {
             loader: 'sass-loader',

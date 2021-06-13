@@ -1,4 +1,4 @@
-import {c} from '@/c.ts';
+import {c} from 'src/c.ts';
 
 const x:string = 'typescript';
 const cc:string = c;

@@ -8,7 +8,9 @@ import vars from 'src/scss-export.scss'
 import LessVars from 'src/less-vars.less'
 import 'src/less-demo.less'
 import React from 'react'
+import {shared} from './share';
 
+console.log(shared);
 console.log(React);
 
 console.log(vars);

@@ -19,6 +19,10 @@ const cssLoaders = (...loaders) => [
 
 module.exports = {
   mode,
+  entry: {
+    main:'src/index.js',
+    admin:'src/admin.js'
+  },
   plugins: [
     new ESLintPlugin({
       extensions: ['.js', '.jsx', 'ts', 'tsx'] // 不加.jsx就不会检查jsx文件了
@@ -26,12 +30,17 @@ module.exports = {
     mode==='production' && new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      filename:'admin.html',
+      chunks:['admin']
+    })
   ].filter(Boolean),
   output: {
     filename: '[name].[contenthash].js'
   },
   optimization:{
+    moduleIds: 'deterministic',
     runtimeChunk:'single',
     splitChunks: {
       cacheGroups: {
@@ -43,6 +52,13 @@ module.exports = {
           chunks: 'all',  // all 表示同步加载和异步加载，async 表示异步加载，initial 表示同步加载
           // 这三行的整体意思就是把两种加载方式的来自 node_modules 目录的文件打包为 vendors.xxx.js
           // 其中 vendors 是第三方的意思
+        },
+        common:{
+          priority: 5,
+          minSize: 0,
+          minChunks: 2,
+          chunks: 'all',
+          name:'common'
         }
       },
     },
